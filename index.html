@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- <header>
+        lol
+    </header> -->
+    <div class="sort_buttons">
+        <button class='sort' onclick="sortOfName()">abc</button>
+        <button class='sort' onclick="sortOfProteins()">б</button>
+        <button class='sort' onclick="sortOfFats()">ж</button>
+        <button class='sort' onclick="sortOfCarbohydrates()">у</button>
+        <button class='sort' onclick="sortOfCalories()">к</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Продукт</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+                <th>Калорийность</th>
+            </tr>
+        </thead>
+        <tbody id="calories_table">
+            <!-- <tr>
+                <td id="name">1</td>
+                <td id="proteins">2</td>
+                <td id="fats">3</td>
+                <td id="carbohydrates">4</td>
+                <td id="calories">5</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <script>
+        for (product of products) {
+    document.getElementById('calories_table').innerHTML+=`
+    <tr>
+                <td id="name">${product.name}</td>
+                <td id="proteins">${product.proteins}</td>
+                <td id="fats">${product.fats}</td>
+                <td id="carbohydrates">${product.carbohydrates}</td>
+                <td id="calories">${product.calories}</td>
+            </tr>
+    `
+}
+    </script>
+</body>
+</html>

@@ -127,10 +127,10 @@ td {
     text-align: center;
 }
 
-.sort_buttons {
+.tools {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 .sort {
@@ -148,4 +148,13 @@ td {
 
 .sort:hover {
   opacity: 80%;
+}
+
+input {
+  background-color: #e0e7ec;
+  border: 0px solid;
+  border-radius: 25px;
+  height: 20px;
+  outline: none;
+  padding: 5px 10px;
 }

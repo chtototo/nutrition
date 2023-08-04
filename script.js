@@ -65,3 +65,20 @@ function render() {
         `
     }
 }
+
+input.addEventListener('input', () => { 
+    document.getElementById('calories_table').innerHTML=``
+    for (product of products) {
+        if (product.name.includes(input.value)) {
+            document.getElementById('calories_table').innerHTML+=`
+        <tr>
+                    <td id="name">${product.name}</td>
+                    <td id="proteins">${product.proteins}</td>
+                    <td id="fats">${product.fats}</td>
+                    <td id="carbohydrates">${product.carbohydrates}</td>
+                    <td id="calories">${product.calories}</td>
+                </tr>
+        `
+        }
+    }
+ });

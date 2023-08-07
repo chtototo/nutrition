@@ -51,7 +51,7 @@ table {
 /*=====================================*/
 
 html {
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -148,6 +148,7 @@ td {
 
 .sort:hover {
   opacity: 80%;
+  transition: 0.3s;
 }
 
 input {
@@ -157,4 +158,30 @@ input {
   height: 20px;
   outline: none;
   padding: 5px 10px;
+  box-shadow: 2px 3px 5px #bdbdbd;
+}
+
+input:hover {
+  opacity: 80%;
+  transition: 0.3s;
+}
+
+select {
+  border: 0px solid;
+  border-radius: 25px;
+  height: 30px;
+  background-color: #e0e7ec;
+  padding: 5px;
+  box-shadow: 2px 3px 5px #bdbdbd;
+  outline: none;
+  font-size: medium;
+}
+
+select:hover {
+  opacity: 80%;
+  transition: 0.3s;
+}
+
+select:active {
+  opacity: 80%;
 }

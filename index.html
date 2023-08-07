@@ -13,7 +13,21 @@
     </header> -->
     <div class="tools">
         <div class="search">
-            <input type="text">
+            <input type="text" id="search" oninput="change()">
+            <select id="categories" onchange='findOption(this)'>
+                <option value="all">Все категории</option>
+                <option value="milk">Молочные продукты</option>
+                <option value="egg">Яйца и яйцепродукты</option>
+                <option value="fish">Рыба и морепродукты</option>
+                <option value="corn">Зерновые продукты</option>
+                <option value="bean">Бобовые</option>
+                <option value="nut">Орехи и семена</option>
+                <option value="vegetable">Овощи и зелень</option>
+                <option value="fruit">Фрукты и ягоды</option>
+                <option value="driedfruit">Сухофрукты</option>
+                <option value="mushroom">Грибы</option>
+                <option value="juice">Фруктовые и овощные соки</option>
+            </select>
         </div>
         <div class="sort_buttons">
             <button class='sort' onclick="sortOfName()">abc</button>

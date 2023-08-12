@@ -144,6 +144,7 @@ td {
     border: 0px solid;
     border-radius: 25px;
     box-shadow: 2px 3px 5px #bdbdbd;
+    color: #656665;
 }
 
 .sort:hover {
@@ -159,6 +160,7 @@ input {
   outline: none;
   padding: 5px 10px;
   box-shadow: 2px 3px 5px #bdbdbd;
+  color: #656665;
 }
 
 input:hover {
@@ -175,6 +177,7 @@ select {
   box-shadow: 2px 3px 5px #bdbdbd;
   outline: none;
   font-size: medium;
+  color: #656665;
 }
 
 select:hover {

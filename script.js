@@ -2767,10 +2767,10 @@ let products = [
     
 ];
 
-// console.log(document.getElementById('categories').value)
+let productss = products;
 
 function sortByField(field) {
-    products.sort((a, b) => a[field] > b[field] ? 1 : -1);
+    productss.sort((a, b) => a[field] > b[field] ? 1 : -1);
 }
 
 function sortOfName() {
@@ -2800,7 +2800,7 @@ function sortOfCalories() {
 
 function render() {
     document.getElementById('calories_table').innerHTML=``
-    for (product of products) {
+    for (product of productss) {
         document.getElementById('calories_table').innerHTML+=`
         <tr>
                     <td id="name">${product.name}</td>
@@ -2839,20 +2839,17 @@ function findOption(select) {
 }
 
 function sortOfCategory(option) {
+    productss = [];
     document.getElementById('calories_table').innerHTML=``;
+    if (option === 'Все категории') {
+        productss = products;
+        render();
+    }
     for (product of products) {
         if (product.category == option) {
-            document.getElementById('calories_table').innerHTML+=`
-        <tr>
-                    <td id="name">${product.name}</td>
-                    <td id="proteins">${product.proteins}</td>
-                    <td id="fats">${product.fats}</td>
-                    <td id="carbohydrates">${product.carbohydrates}</td>
-                    <td id="calories">${product.calories}</td>
-                </tr>
-        `
-        }else if(option == 'Все категории') {
+            productss.push(product);
             render();
         }
     }
+    
 }
